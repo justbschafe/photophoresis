@@ -23,7 +23,7 @@ In this section, the analytical model is defined.
 Physical constants for the relevant environment (e.g. Earth's atmosphere) are defined. Mathematica's Standard Atmosphere package (https://reference.wolfram.com/language/StandardAtmosphere/tutorial/StandardAtmosphere.html.en) is used to define atmospheric properties, and those in all other environments are given in the paper's Supplementary Information.
 
 **DSMC data for a permeable membrane.** 
-DSMC data from the numerical model is input. This data can be found in the .csv file in this repository. Sample data for a porosity of 0.5 is imported.
+DSMC data from the numerical model is input. This data can be found in the Excel file in this repository. Sample data for a porosity of 0.5 is imported.
 
 **Hybrid force models.** 
 The analytical model is defined as stated in the methods of the paper's main text. 
@@ -60,7 +60,7 @@ The files are used to calculate the dimensionless radiomentric force and heat fl
 
 **Steps to perform the calculations:**
 1. Compile the main code:
-```mpif77 -w -fallow-argument-mismatch -O3 -o d.exe disc.for```
+```mpif77 -w -fallow-argument-mismatch -O3 -o d.exe disc.for```. The parameter ```tstat``` determines the number of samples.
 2. Compile the secondary code:
 ```gfortran -o R.exe Res.for```
 3. Run the main codes via the queue. If allowed by the cluster, run it directly:
@@ -69,4 +69,6 @@ The files are used to calculate the dimensionless radiomentric force and heat fl
 ```./R.exe```
 5. The last step generates the files ```Res.dat``` and ```F.dat```. The former contains the total force, total energy fluxes, local pressures and local energy fluxes. The latter contains the flow-field.
 
+**Demonstration**
+The files here will produce data for helium gas, $\delta$ = 1, $\beta$ = 0.5, domain edge and membrane top temperature 300 K, membrane bottom temperature 400 K, and diffuse reflection. This code takes about 10 hours to achieve data with sufficiently low statistical scatter with the above computational power.
 
