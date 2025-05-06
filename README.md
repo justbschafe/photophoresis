@@ -23,13 +23,13 @@ In this section, the analytical model is defined.
 Physical constants for the relevant environment (e.g. Earth's atmosphere) are defined. Mathematica's Standard Atmosphere package (https://reference.wolfram.com/language/StandardAtmosphere/tutorial/StandardAtmosphere.html.en) is used to define atmospheric properties, and those in all other environments are given in the paper's Supplementary Information.
 
 **DSMC data for a permeable membrane.** 
-DSMC data from the numerical model is input. This data can be found in the Excel file in this repository. Sample data for a porosity of 0.5 is imported.
+DSMC data from the numerical model is input. This data can be found in the Excel file in this repository. Sample data for a structure with $\beta$ = 0.5 is imported.
 
 **Hybrid force models.** 
 The analytical model is defined as stated in the methods of the paper's main text. 
 
 **Lofting force calculations.** 
-In this section, the model is used to calculate photophoretic forces of interest. Descriptions of the model's inputs are given, and sample calculations of the lofting force on a structure with porosity 0.5 are shown. Calculating the lofting force for a single set of input parameters typically takes a few ms. 
+In this section, the model is used to calculate photophoretic forces of interest. Descriptions of the model's inputs are given, and sample calculations of the lofting force on a structure with $\beta$ = 0.5 are shown. Calculating the lofting force for a single set of input parameters typically takes a few ms. 
 
 **2D Temperature calculations.** 
 In this section, the 2D model described in the paper's Supplementary Information is defined on two scales: microscale in the plane of the sample and macroscale around a uniform thin disk.
